@@ -1,0 +1,8 @@
+.hidden
+  Ember.Select value=locale content=locales
+.selected-value click="openSelection"
+  span.spacebar.upcase= locale
+  i.fa.fa-caret-down
+ul.selections
+  each asdfasdf in locales
+    selection-country-slice locale=asdfasdf activeLocale=locale action="selectLocale"

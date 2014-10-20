@@ -1,0 +1,6 @@
+.small-12.columns.tagline-row
+  h1.white.footer-title My Company Tagline
+  .footer-divider
+  p.copyright My Company Inc. All Rights Reserved
+  link-to "admin" class="admin-btn button secondary"
+    span.capitalize admin

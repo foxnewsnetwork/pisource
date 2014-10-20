@@ -1,0 +1,35 @@
+.introductory-lobby {
+  .summary {
+    margin-bottom: 55px;
+  }
+  .title {
+    margin-top: 55px;
+  }
+  .fishing-background {
+    background: {
+      image: url(introductory-lobby/fishing.jpg);
+      size: cover;
+      position: center center;
+    }
+    min-height: 440px;
+  }
+  .flex {
+    @include display-flex;
+    @include align-items(stretch);
+    @include flex-wrap(wrap);
+    @include flex-flow(space-between);
+    width: 100%;
+  }
+  .table-like {
+    padding-bottom: 0px;
+    @media #{$small-only} {
+      width: 100%;
+    }
+    @media #{$medium-only} {
+      width: 100%;
+    }
+    @media #{$large-up} {
+      width: 50%;
+    }
+  }
+}

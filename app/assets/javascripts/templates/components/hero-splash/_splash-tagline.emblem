@@ -1,0 +1,6 @@
+.splash-tagline
+  .tagline-container
+    .small-12.medium-8.columns
+      h2.companytag Pisource Inc.
+      h4.posttag 
+        tr-span en="fresh bulk seafood from all over the United States"
