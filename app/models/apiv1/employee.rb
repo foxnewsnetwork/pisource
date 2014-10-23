@@ -13,11 +13,17 @@
 #
 
 class Apiv1::Employee < ActiveRecord::Base
-  belongs_to :picture,
-    class_name: 'Apiv1::Picture'
+  has_many :pictures,
+    class_name: 'Apiv1::Picture',
+    as: :depictable
+  Fields = [:person_name, :employee_title, :email, :phone_number]
 
+  validates :person_name,
+    :employee_title,
+    presence: true
+    
   def to_ember_hash
-    return attributes.merge mug_shot: picture.pic(:thumb) if picture.present?
+    return attributes.merge mug_shot: pictures.first.pic(:thumb) if pictures.present?
     attributes
   end
 end

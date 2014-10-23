@@ -4,6 +4,7 @@ class CreateApiv1ListingsPlastics < ActiveRecord::Migration
       t.string :permalink
       t.string :sku
       t.string :material
+      t.string :quality
       t.string :price
       t.string :amount
       t.string :place

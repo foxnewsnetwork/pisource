@@ -6,6 +6,7 @@
 #  permalink  :string(255)
 #  sku        :string(255)
 #  material   :string(255)
+#  quality    :string(255)
 #  price      :string(255)
 #  amount     :string(255)
 #  place      :string(255)

@@ -5,7 +5,6 @@ class CreateApiv1Employees < ActiveRecord::Migration
       t.string :employee_title
       t.string :email
       t.string :phone_number
-      t.references :picture
       t.timestamps
     end
   end

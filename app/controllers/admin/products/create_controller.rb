@@ -1,4 +1,4 @@
-class Admin::Products::CreateController < ApplicationController
+class Admin::Products::CreateController < Admin::BaseController
   def create
     if _product_creation_success?
       _product_factory.save!

@@ -6,7 +6,6 @@ class Admin::ProductFactory
     @taxon_ids = _arrayify input_params[:taxons]
     @raw_attachments = _arrayify(input_params[:attachments])
     @raw_pictures = _arrayify(input_params[:pictures])
-
   end
   def satisfy_specifications?
     _taxon_relationships.all?(&:valid?) && _pictures.all?(&:valid?) && _attachments.all?(&:valid?) && _product.valid?

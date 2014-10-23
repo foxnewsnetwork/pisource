@@ -1,12 +1,23 @@
 source 'https://rubygems.org'
+
+group :development do
+  gem 'cloudrider', path: File.expand_path("../../cloudrider", __FILE__)
+end
+
+group :production do
+  gem 'pg'
+  gem 'rails_12factor'
+end
+
 # Core Backend
 gem 'rails', '4.1.6'
 gem 'gctools', '~>0.2.3'
-gem 'functional_support', '>=0.0.6'
+gem 'functional_support', '>=0.0.11'
 gem 'mysql2'
 gem 'kaminari', '~> 0.16.1'
 gem 'paperclip', '~> 4.2.0'
 gem 'commerce_units', '>= 0.0.5'
+gem 'sorcery', '~> 0.8.6'
 gem 'probability', "1"
 gem 'elasticsearch-rails', '~> 0.1.4'
 gem 'elasticsearch-model', '~> 0.1.4'
@@ -46,6 +57,7 @@ gem 'turbolinks'
 gem 'jbuilder', '~> 1.2'
 
 group :development do
+  gem 'did_you_mean'
   gem 'rspec', '~> 3.1'
   gem 'rspec-rails', '~> 3.1'
   gem 'annotate', ">=2.5.0.pre1"
