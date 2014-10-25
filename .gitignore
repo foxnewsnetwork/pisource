@@ -16,3 +16,4 @@
 /tmp
 
 /vendor/assets/javascripts/bower_components
+/public/system

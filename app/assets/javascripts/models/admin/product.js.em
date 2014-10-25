@@ -3,6 +3,7 @@ class Apiv1.AdminProduct extends DS.Model
   material: DS.attr "string"
   price: DS.attr "string"
   amount: DS.attr "string"
+  quality: DS.attr "string"
   place: DS.attr "string"
   others: DS.attr "string"
   

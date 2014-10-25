@@ -1,4 +1,4 @@
 class Apiv1.IndexRoute extends Ember.Route
   model: -> 
-    products: @store.find("product", limit: 9)
-    contacts: @store.find("employee", limit: 5)
+    products: @store.find("product", per: 3)
+    employees: @store.find("employee", per: 5)

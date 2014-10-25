@@ -1,0 +1,41 @@
+.row.admin-products-new
+  .small-12.columns
+    form-for errors=failureReason submit="formSubmitted"
+      fieldset
+        legend.capitalize.bold 
+          tr-span en="edit listing"
+        .input-section attr-name="material"
+          label.form-label
+            span.asterisk
+              tr-span en="listing name"
+            Ember.TextField name="material" value=adminProduct.material placeholder="hot dog"
+        .input-section attr-name="sku"
+          label.form-label
+            tr-span en="external reference number"
+            Ember.TextField name="sku" value=adminProduct.sku placeholder="XYZ-00123"
+        .input-section attr-name="price"
+          label.form-label
+            tr-span en="how much to sell for?"
+            Ember.TextField name="price" value=adminProduct.price placeholder="0.33 USD / pound FAS Long Beach Port"
+        .input-section attr-name="amount"
+          label.form-label
+            tr-span en="how much of it do you have?"
+            Ember.TextField name="amount" value=adminProduct.amount placeholder="200 tons every week"
+        .input-section attr-name="quality"
+          label.form-label
+            tr-span en="what sort of goods are these?"
+            Ember.TextField name="quality" value=adminProduct.quality placeholder="A grade, baled"
+        .input-section attr-name="place"
+          label.form-label
+            tr-span en="where is this?"
+            Ember.TextField name="place" value=adminProduct.place placeholder="Los Angeles"
+        .input-section attr-name="others"
+          label.form-label
+            tr-span en="anything else?"
+            Ember.TextArea name="others" value=adminProduct.otherNotes
+        
+        .actions.row
+          .small-6.columns.end
+            a class="button expand disabled secondary"
+              i.fa.fa-check
+              span.capitalize.bold edit not implemented

@@ -1,12 +1,20 @@
-/# fluid-media-one 
-/# fluid-livetiles
-/# fluid-smalltiles
-/# fluid-simple-menu
-/# fluid-carousel
-/# contained-media-one
-== partial "components/products-showcase/contained-media-one"
+if products.isPending
+  .contained-media-one.product-container
+    h2.capitalize.ellipsis
+      i.fa.fa-cog.fa-spin
+      tr-span en="loading..."
+else
+  each product in products
+    .contained-media-one.product-container
+      product-display product=product class="container-row product-row"
+  else
+    .contained-media-one.product-container
+      product-display class="container-row product-row"
 
-/# contained-livetiles
-/# contained-smalltiles
-/# contained-simple-menu
-/# contained-carousel
+.product-post-note
+  link-to "products.index"
+    h2.after-thought
+      span.spacebar= products.length
+      span.capitalize.spacebar 
+        tr-span en="total products"
+      i.fa.fa-caret-right

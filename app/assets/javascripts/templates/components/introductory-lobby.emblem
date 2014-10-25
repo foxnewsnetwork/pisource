@@ -1,11 +1,12 @@
-/# center-plain
-.flex
-  .table-like
-    .row
-      .small-12.medium-6.medium-offset-5.columns.text-right
-        h1.title.capitalize
-          tr-span en="about us"
-        h3.company-bs
-          tr-span en="bringing the best bounties of the sea to millions around the world"
-        p.summary= summary
-  .table-like.fishing-background
+.horizontal-cell
+  .row
+    .small-12.medium-6.medium-offset-5.columns.text-right
+      h1.title.capitalize
+        tr-span en="about us"
+      h3.company-bs
+        tr-span en="bringing the best bounties of the sea to millions around the world"
+      p.summaries
+        each sentence in summarySentences
+          span.spacebar
+            tr-span en=sentence
+.horizontal-cell.fishing-background

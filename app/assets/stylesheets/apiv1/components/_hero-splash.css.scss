@@ -18,11 +18,7 @@
     @include display-flex;
     @include justify-content(center);
     // variable depending upon average background color, use if bg image colors are spread apart enough
-    @include background-image(linear-gradient(to right, fade-out(#fd7000, 0.3), fade-out(#fd7, 1)));
-  }
-  .companytag {
-    font-size: 2.5rem;
-    font-weight: bold;
+    @include background-image(linear-gradient(to right, fade-out(#444, 0.4), fade-out(#557, 1)));
   }
   .splash-tagline {
     padding-top: 10px;
@@ -40,5 +36,8 @@
     text-align: left;
     // variable - invert color of albatross
     color: #eee;
+  }
+  .companytag {
+    font-weight: bold;
   }
 }

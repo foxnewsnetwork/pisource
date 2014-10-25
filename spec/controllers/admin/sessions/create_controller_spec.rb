@@ -2,7 +2,7 @@ require 'rails_helper'
 
 describe Admin::Sessions::CreateController do
   let(:user) { Admin::UserFactory.mock }
-  let(:create) { post :create, session: @session }
+  let(:create) { post :create, admin_session: @session }
   context 'failure' do
     before do
       @session = {

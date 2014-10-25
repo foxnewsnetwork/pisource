@@ -1,2 +1,2 @@
-Admin::User.create! email: "test@example.co",
+Admin::User.create! email: "admin@pisource.inc",
   password: "asdf123"

@@ -9,6 +9,7 @@ group :production do
   gem 'rails_12factor'
 end
 
+# Cloudrider requires the following gems
 # Core Backend
 gem 'rails', '4.1.6'
 gem 'gctools', '~>0.2.3'
@@ -67,9 +68,4 @@ group :development do
   gem "spring"
   gem 'easy_translate'
   gem 'painful_translate', '>=0.0.4'
-end
-
-group :production do
-  gem 'pg'
-  gem 'rails_12factor'
 end

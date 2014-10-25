@@ -4,7 +4,7 @@
       i.fa.fa-key
       span.prespace= model.key
     .edit
-      link-to "admin.translation.edit" model.id
+      link-to "admin.translation.edit" model.key
         i.fa.fa-edit
         span.prespace
           tr-span en="edit"

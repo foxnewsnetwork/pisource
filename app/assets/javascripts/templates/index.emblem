@@ -4,4 +4,4 @@ introductory-lobby id="about"
 
 products-showcase id="products" products=model.products
 
-table-booths id="contacts" contacts=model.contacts
+table-booths id="contacts" employees=model.employees

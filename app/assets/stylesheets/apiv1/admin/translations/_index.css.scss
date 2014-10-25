@@ -29,7 +29,8 @@
     padding: 15px;
     font-size: 1.25rem;
   }
-  .edit {
+  .edit,
+  .create {
     font-size: 1.25rem;
     padding: 15px;
     @include transition-property(background-color);
@@ -56,5 +57,12 @@
   }
   .text {
     padding-left: 15px;
+  }
+  .now-loading {
+    padding: 15px;
+    font-size: 1.25rem;
+  }
+  .search-results {
+    margin-top: 25px;
   }
 }

@@ -4,9 +4,16 @@ class Apiv1.TrSpanComponent extends Ember.Component
   opts: {}
   +computed I18n.locale, key, opts
   translated: ->
-    Ember.assert "Translations require string keys, not null", @key?
-    I18n.t @key, @opts
+    return "No key given" unless @key?
+    if tld = I18n.lookup @key, @opts
+      delete I18n.missingKeys[@key] if I18n.missingKeys?
+      tld
+    else
+      I18n.missingKeys ||= {}
+      I18n.missingKeys[@key] ||= @en
+      @en
 
   +computed en
   key: ->
+    return if Ember.isBlank @en
     Apiv1.StringEx.keyify @en

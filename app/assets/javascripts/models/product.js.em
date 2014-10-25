@@ -4,8 +4,10 @@ class Apiv1.Product extends DS.Model
   price: DS.attr "string"
   amount: DS.attr "string"
   place: DS.attr "string"
+  quality: DS.attr "string"
   others: DS.attr "string"
-
+  createdAt: DS.attr "date"
+  updatedAt: DS.attr "date"
   attachments: DS.hasMany "attachment", async: true
   pictures: DS.hasMany "picture", async: true
   taxons: DS.hasMany "taxon", async: true
