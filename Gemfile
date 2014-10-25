@@ -1,9 +1,5 @@
 source 'https://rubygems.org'
 
-group :development do
-  gem 'cloudrider', path: File.expand_path("../../cloudrider", __FILE__)
-end
-
 group :production do
   gem 'pg'
   gem 'rails_12factor'
