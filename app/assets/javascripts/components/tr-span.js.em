@@ -4,7 +4,6 @@ class Apiv1.TrSpanComponent extends Ember.Component
   opts: {}
   +computed I18n.locale, key, opts
   translated: ->
-    return "No key given" unless @key?
     if tld = I18n.lookup @key, @opts
       delete I18n.missingKeys[@key] if I18n.missingKeys?
       tld
