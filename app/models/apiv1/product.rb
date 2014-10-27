@@ -16,7 +16,7 @@
 #
 
 class Apiv1::Product < ActiveRecord::Base
-  Fields = [:sku, :material, :price, :amount, :place, :others]
+  Fields = [:sku, :material, :price, :amount, :place, :others, :quality]
   has_many :taxon_relationships,
     class_name: 'Apiv1::Listings::TaxonRelationship',
     as: :listing

@@ -55,7 +55,7 @@ gem 'turbolinks'
 gem 'jbuilder', '~> 1.2'
 
 group :development do
-  gem 'did_you_mean'
+  # gem 'did_you_mean'
   gem 'rspec', '~> 3.1'
   gem 'rspec-rails', '~> 3.1'
   gem 'annotate', ">=2.5.0.pre1"

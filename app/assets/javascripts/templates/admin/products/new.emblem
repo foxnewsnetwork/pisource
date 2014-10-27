@@ -32,7 +32,7 @@
         .input-section attr-name="others"
           label.form-label
             tr-span en="anything else?"
-            Ember.TextArea name="others" value=model.otherNotes
+            Ember.TextArea name="others" value=model.others
         .input-section attr-name="files"
           label.form-label
             tr-span en="related files"

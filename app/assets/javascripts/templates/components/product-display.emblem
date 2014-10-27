@@ -6,9 +6,9 @@ if product
       tr-span en=product.material
       if product.sku
         span.predash= product.sku
-    if product.other
+    if product.others
       p.product-summary
-        tr-span en=product.other
+        tr-span en=product.others
     if product.attachments
       p.related-files
         each attachment in product.attachments
