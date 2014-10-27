@@ -1,8 +1,9 @@
 source 'https://rubygems.org'
 
 group :production do
-  gem 'pg'
+  # gem 'pg'
   gem 'rails_12factor'
+  gem 'unicorn', '~> 4.8.3'
 end
 
 # Cloudrider requires the following gems
