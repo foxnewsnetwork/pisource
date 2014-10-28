@@ -2,7 +2,7 @@ class Admin::Products::UpdateController < Admin::BaseController
   def update
     if _product_modification_success?
       _product_modifier.update!
-      render json: _product_hash
+      render json: { product: _product_hash }
     else
       render json: _error_hash, status: :expectation_failed
     end

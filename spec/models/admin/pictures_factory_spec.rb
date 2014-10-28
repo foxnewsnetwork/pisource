@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 describe Admin::PicturesFactory do
-  let(:product) { }
+  let(:product) { Apiv1::ProductFactory.new.create }
   let(:factory) { described_class.new product, @picture_params }
   let(:picture) { Apiv1::PictureFactory.rack_file }
   before do

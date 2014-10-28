@@ -1,11 +1,19 @@
 class Admin::ProductModifier
-  def initialize(product, params)
+  def initialize(product, params={})
     @product = product
     @raw_params = params
   end
 
+  def product_hash
+    _product.to_ember_hash
+  end
+
+  def error_hash
+    _product.errors.to_h
+  end
+
   def update!
-    _product.save!
+    _product.tap &:save!
   end
 
   def satisfy_specifications?
@@ -26,6 +34,6 @@ class Admin::ProductModifier
   end
 
   def _pictures_factory
-    @pictures_factory ||= Admin::PicturesFactory.new @raw_params[:pictures]
+    @pictures_factory ||= Admin::PicturesFactory.new _product, @raw_params[:pictures]
   end
 end

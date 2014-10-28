@@ -10,7 +10,7 @@ end
 # Core Backend
 gem 'rails', '4.1.6'
 gem 'gctools', '~>0.2.3'
-gem 'functional_support', '>=0.0.11'
+gem 'functional_support', '>=0.0.12'
 gem 'mysql2'
 gem 'kaminari', '~> 0.16.1'
 gem 'paperclip', '~> 4.2.0'

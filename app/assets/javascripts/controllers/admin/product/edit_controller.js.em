@@ -9,7 +9,7 @@ class Apiv1.AdminProductEditController extends Ember.ObjectController
     @transitionToRoute 'admin.products.index'
   notifySuccess: ->
     Apiv1.Flash.register "success", "listing updated! Refresh your browser to see changes", 5000
-  successfulSave: (product) ->
+  successUpdate: (product) ->
     @notifySuccess()
     @redirectToIndex()
   failedUpdate: (reason) ->
