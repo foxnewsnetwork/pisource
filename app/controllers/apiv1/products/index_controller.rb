@@ -9,8 +9,8 @@ class Apiv1::Products::IndexController < Apiv1::HomeController
   def _meta_hash
     {
       page: _query_params[:page],
-      per_page: _query_params[:per],
-      products_count: _products.count
+      per: _query_params[:per],
+      count: _products.count
     }
   end
   def _products

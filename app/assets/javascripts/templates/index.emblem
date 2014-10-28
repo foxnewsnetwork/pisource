@@ -2,6 +2,6 @@ hero-splash
 
 introductory-lobby id="about"
 
-products-showcase id="products" products=model.products
+products-showcase id="products" products=model.products productsCount=model.productMetadata.firstObject.count
 
 table-booths id="contacts" employees=model.employees

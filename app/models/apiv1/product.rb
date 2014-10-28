@@ -16,6 +16,8 @@
 #
 
 class Apiv1::Product < ActiveRecord::Base
+  include ::Elasticsearch::Model
+  include ::Elasticsearch::Model::Callbacks
   Fields = [:sku, :material, :price, :amount, :place, :others, :quality]
   has_many :taxon_relationships,
     class_name: 'Apiv1::Listings::TaxonRelationship',

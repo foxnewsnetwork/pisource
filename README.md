@@ -1,5 +1,5 @@
 # TODO: October 27, 2014
-feature. product edit button (working on)
+feature. product edit button (done)
 bug. everything in product show show up (fixed)
 feature. translations:append_yaml
 feature. translations new

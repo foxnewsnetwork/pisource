@@ -51,7 +51,6 @@ gem 'coffee-rails', '~> 4.0.1'
 gem 'livescript-rails'
 gem 'underscore-rails'
 gem 'uglifier', '>= 1.3.0'
-gem 'turbolinks'
 gem 'jbuilder', '~> 1.2'
 
 group :development do
