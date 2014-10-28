@@ -1,9 +1,9 @@
 .row.admin-products-new
-  .small-12.columns
-    form-for errors=failureReason submit="formSubmitted"
+  form-for errors=failureReason submit="formSubmitted"
+    .small-12.columns
       fieldset
         legend.capitalize.bold 
-          tr-span en="edit listing"
+          tr-span en="edit listing core"
         .input-section attr-name="material"
           label.form-label
             span.asterisk
@@ -32,10 +32,38 @@
         .input-section attr-name="others"
           label.form-label
             tr-span en="anything else?"
-            Ember.TextArea name="others" value=adminProduct.otherNotes
-        
+            Ember.TextArea name="others" value=adminProduct.others
+    
+    .small-12.columns
+      fieldset
+        legend.capitalize.bold
+          tr-span en="existing pictures"      
+        block-grid-pictures pictures=model.pictures
+
+    .small-12.columns
+      fieldset
+        legend.capitalize.bold
+          tr-span en="upload more pictures"
+        .input-section attr-name="pictures"
+          label.form-label
+            span.asterisk
+              tr-span en="your listing needs at least 1 picture"
+              span.parantheses
+                tr-span en="the first picture will be displayed in the showcase"
+            files-field name="pictures" files=adminProduct.pictures class="form-control upload-control"
+    
+    .small-12.columns
+      fieldset
+        legend.capitalize.bold
+          tr-span en="actions"
         .actions.row
-          .small-6.columns.end
-            a class="button expand disabled secondary"
+          .small-6.columns
+            promise-button model=adminProduct class="button expand"
               i.fa.fa-check
-              span.capitalize.bold edit not implemented
+              span.capitalize.bold
+                tr-span en="save"
+          .small-6.columns.end
+            link-to "admin.products.index" class="button expand secondary"
+              i.fa.fa-times
+              span.capitalize.bold
+                tr-span en="back"

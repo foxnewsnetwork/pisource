@@ -6,6 +6,7 @@ Rails.application.routes.draw do
     resources :products, only: [:show], controller: 'products/show'
     resources :products, only: [:destroy], controller: 'products/destroy'
     resources :pictures, only: [:show], controller: 'pictures/show'
+    resources :pictures, only: [:destroy], controller: 'pictures/destroy'
     resources :taxons, only: [:index], controller: 'taxons/index'
     resources :taxons, only: [:show], controller: 'taxons/show'
     resources :employees, only: [:show], controller: 'employees/show'
@@ -19,6 +20,7 @@ Rails.application.routes.draw do
 
   namespace :admin do
     resources :admin_products, only: [:create], controller: 'products/create'
+    resources :admin_products, only: [:update], controller: 'products/update'
     
     resources :admin_employees, only: [:create], controller: 'employees/create'
 

@@ -1,8 +1,0 @@
-# TODO: October 27, 2014
-1. product edit button
-2. everything in product show show up
-3. translations:append_yaml
-4. translations new
-5. about page css on mobile
-6. table-booth css on mobile
-7. debounce searches

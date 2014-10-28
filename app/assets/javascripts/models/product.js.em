@@ -15,3 +15,15 @@ class Apiv1.Product extends DS.Model
   +computed material, price, amount, place, sku
   roughSummary: ->
     "#{@price || 'no price'} #{@material || 'unknown material'} #{@amount || 'unknown quantity'} @ #{@place || 'unknown place'} - #{@sku || 'no sku'}"
+
+
+  +computed id, sku, material, price, amount, place, quality, others
+  coreAttributes: ->
+    id: @get("id")
+    sku: @get("sku")
+    material: @get("material")
+    price: @get("price")
+    amount: @get("amount")
+    place: @get("place")
+    quality: @get("quality")
+    others: @get("others")
