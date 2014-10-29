@@ -20,5 +20,6 @@ class Apiv1.ProductsIndexController extends Ember.ObjectController
 
   actions:
     search: (opts) ->
+      @page = 1
       @query = opts.searchQuery
       @activeTaxons = opts.activeTaxons

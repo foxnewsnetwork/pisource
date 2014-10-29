@@ -4,14 +4,33 @@ class Apiv1::ProductsMachine
     @params = params
   end
   def products
-    @products = _filter_pipeline.call Apiv1::Product
+    @products ||= _filter_pipeline.call Apiv1::Product
+  end
+  def meta_hash
+    {
+      page: _page,
+      per: _per_page,
+      count: _product_total
+    }
   end
   private
+  def _product_total
+    @elastic_query.try(:count) || Apiv1::Product.count
+  end
   def _filter_pipeline
     _possible_query_search >> _paginate >> _unify_type >> _process_taxons >> _process_ordering
   end
   def _possible_query_search
-    -> (t) { _query.present? ? t.search(_query) : t }
+    lambda do |product|
+      if _query.present?
+        _cached_elasticsearch_product_query product
+      else
+        product
+      end
+    end
+  end
+  def _cached_elasticsearch_product_query(product)
+    @elastic_query ||= product.search _query
   end
   def _paginate
     -> (t) { t.page(_page).per(_per_page) }
@@ -20,7 +39,13 @@ class Apiv1::ProductsMachine
     -> (product) { product.order_by_created_at }
   end
   def _process_taxons
-    -> (product) { _taxon_ids.present? ? product.involving_taxon_ids(_taxon_ids) : product }
+    lambda do |product|
+      if _taxon_ids.present?
+        @taxon_query ||= product.involving_taxon_ids(_taxon_ids)
+      else
+        product
+      end
+    end
   end
   def _unify_type
     -> (t) { t.respond_to?(:records) ? t.records.load : t }
