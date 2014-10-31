@@ -14,7 +14,7 @@ else
 .product-post-note
   link-to "products.index"
     h2.after-thought
-      span.spacebar= productsCount
+      span.spacebar= products.content.meta.count
       span.capitalize.spacebar 
         tr-span en="total products"
       i.fa.fa-caret-right

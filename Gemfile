@@ -54,7 +54,7 @@ gem 'uglifier', '>= 1.3.0'
 gem 'jbuilder', '~> 1.2'
 
 group :development do
-  # gem 'did_you_mean'
+  gem 'did_you_mean'
   gem 'rspec', '~> 3.1'
   gem 'rspec-rails', '~> 3.1'
   gem 'annotate', ">=2.5.0.pre1"
@@ -64,4 +64,5 @@ group :development do
   gem "spring"
   gem 'easy_translate'
   gem 'painful_translate', '>=0.0.4'
+  gem 'cloudrider', '>=0.1'
 end

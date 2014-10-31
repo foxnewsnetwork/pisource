@@ -10,7 +10,6 @@
   #fixed-bottom
     .row
       flash-message
-
 .modal-background
   .modal-vertical-container
     == outlet "modal"

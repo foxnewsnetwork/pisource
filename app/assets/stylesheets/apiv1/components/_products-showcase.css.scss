@@ -8,7 +8,7 @@
     @include justify-content(center);
   }
   .product-row {
-    width: 1250px;
+    width: $row-width;
   }
   .container-row {
     @include display-flex;
@@ -17,38 +17,14 @@
     @include flex-direction(row);
     @include flex-wrap(wrap-reverse);
   }
-  .media-object {
-    padding-left: 15px;
-    @media #{$small-only} {
-      width: 100%;
-    }
-    @media #{$medium-up} {
-      width: 33%;
-    }
-  }
-  .media-texts {
-    padding-left: 15px;
-    @media #{$small-only} {
-      width: 100%;
-    }
-    @media #{$medium-up} {
-      width: 66%;
-    }
-  }
-  img.product-image {
-    min-height: 275px;
-  }
-  .product-title {
-    font-size: 2rem;
-    text-transform: capitalize;
-  }
   .product-post-note {
     @include display-flex;
     @include justify-content(center);
     @include flex-direction(column);
     background: {
-      image: url(products-showcase/rocks.jpg);
+      image: url(hero-splash/rocks.jpg);
       size: cover;
+      position: center center;
     }
     min-height: 30rem;
   }
