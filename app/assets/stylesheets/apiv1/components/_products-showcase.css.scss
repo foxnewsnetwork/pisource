@@ -17,6 +17,17 @@
     @include flex-direction(row);
     @include flex-wrap(wrap-reverse);
   }
+  .product-pre-note {
+    @include display-flex;
+    @include justify-content(center);
+    @include flex-direction(column);
+    background: {
+      image: url(hero-splash/rocks.jpg);
+      size: cover;
+      position: top center;
+    }
+    min-height: 30rem;
+  }
   .product-post-note {
     @include display-flex;
     @include justify-content(center);
@@ -24,7 +35,7 @@
     background: {
       image: url(hero-splash/rocks.jpg);
       size: cover;
-      position: center center;
+      position: bottom center;
     }
     min-height: 30rem;
   }

@@ -62,10 +62,3 @@
         each attachment in product.attachments
           a href=attachment.fileUrl
             span.spacebar= attachment.fileName
-
-  .row
-    .small-12.columns
-      .call-to-action
-        tr-span en="is this what you are looking for?"
-      a.button.email-us href="mailto:terricapo@gmail.com"
-        tr-span en="send us an email"

@@ -1,3 +1,8 @@
+.product-pre-note
+  h2.after-thought.capitalize
+    tr-span en="showcase specials"
+
+
 if products.isPending
   .contained-media-one.product-container
     h2.capitalize.ellipsis
