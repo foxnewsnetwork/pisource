@@ -1,6 +1,6 @@
 class Apiv1::Translations::UpdateController < Admin::BaseController
 
-  def create
+  def update
     if _update_successful?
       render json: { translation: _translation_hash }
     else

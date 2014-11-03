@@ -32,7 +32,7 @@
                 span= product.price
             if product.place
               dt.upcase 
-                tr-span en="location"
+                tr-span en="origin"
               dd
                 span= product.place
             if product.quality
