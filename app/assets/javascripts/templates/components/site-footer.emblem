@@ -3,8 +3,8 @@
     h3.call-us
       tr-span en="are you a wholesale buyer?"
       span.spacebar
-        a.email-us href="mailto:terricapo@gmail.com"
-          tr-span en="email us: terricapo@gmail.com"
+        a.email-us href="mailto:info@pisources.com"
+          tr-span en="email us: info@pisources.com"
           
 .row
   .medium-push-2.large-push-2.large-10.medium-10.small-12.columns

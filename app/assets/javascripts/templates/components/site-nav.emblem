@@ -1,8 +1,7 @@
 .possible-container
   link-to "index" (query-params anchor="") class="title-area"
-    .hide-for-medium-up
-      i.fa.fa-home
-    .company-name.show-for-medium-up Pisource Inc.
+    .logo
+      img.pisource-logo src="assets/site-nav/pisource.png"
 
   section.options-menu
     link-to "index" (query-params anchor="about") class="menu-tab"

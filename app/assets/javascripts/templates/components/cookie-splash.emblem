@@ -1,8 +1,8 @@
 .splash-background.standard-container
   .page-intro
-    .active-page-title
+    .active-page-title.capitalize
       tr-span en="products index"
-      img.th.product-icon src="assets/cookie-splash/california.png"
+      img.th.product-icon src="assets/cookie-splash/pisource.png"
 
 .standard-container
   .cookiecrumbs
