@@ -1,3 +1,9 @@
+.row
+  .small-6.medium-4.large-2.columns.end
+    link-to "admin.products.index" class="button expand secondary"
+      i.fa.fa-chevron-left
+      span.capitalize.bold 
+        tr-span en="back"
 .row.admin-products-new
   .small-12.columns
     form-for errors=failureReason submit="formSubmitted"
@@ -33,12 +39,18 @@
           label.form-label
             tr-span en="anything else?"
             Ember.TextArea name="others" value=model.others
+        .input-section attr-name="showcaseOrder"
+          label.form-label
+            tr-span en="showcase display number"
+            span.parantheses
+              tr-span en="the smaller the number, the higher up it appears in the showcase on the front page"
+            Ember.TextField type="number" name="showcaseOrder" value=model.showcaseOrder
         .input-section attr-name="files"
           label.form-label
             tr-span en="related files"
             span.parantheses
               tr-span en="these will be pubicly available"
-            files-field name="files" files=model.files class="form-control upload-control"
+            files-field name="attachments" files=model.attachments class="form-control upload-control"
         .input-section attr-name="pictures"
           label.form-label
             span.asterisk
@@ -46,6 +58,10 @@
               span.parantheses
                 tr-span en="the first picture will be displayed in the showcase"
             files-field name="pictures" files=model.pictures class="form-control upload-control"
+        .input-section attr-name="taxons"
+          label.form-label
+            tr-span en="select appropriate category tags for this product"
+          tree-taxon-wrapper taxons=rootTaxons activeTaxons=activeTaxons
         
         .actions.row
           .small-6.columns.end
@@ -53,4 +69,5 @@
               i.fa.fa-check
               span.capitalize.bold 
                 tr-span en="submit"
+          
             

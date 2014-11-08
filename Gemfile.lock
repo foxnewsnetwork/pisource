@@ -1,7 +1,7 @@
 PATH
   remote: /home/ia/workspace/cloudrider
   specs:
-    cloudrider (0.2.2)
+    cloudrider (0.2.4)
       activesupport (>= 3)
       functional_support (>= 0.0.12)
       tilt (>= 1.4)
