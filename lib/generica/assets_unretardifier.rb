@@ -1,3 +1,4 @@
+module Generica; end
 class Generica::AssetsUnretardifier
   include Thor::Base
   include Thor::Actions
