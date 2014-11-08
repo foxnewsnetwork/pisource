@@ -64,5 +64,5 @@ group :development do
   gem "spring"
   gem 'easy_translate'
   gem 'painful_translate', '>=0.0.4'
-  gem 'cloudrider', '>=0.1'
+  gem 'cloudrider', path: File.expand_path("../cloudrider")
 end

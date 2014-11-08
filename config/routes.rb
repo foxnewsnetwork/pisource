@@ -11,6 +11,8 @@ Rails.application.routes.draw do
     resources :pictures, only: [:destroy], controller: 'pictures/destroy'
     resources :taxons, only: [:index], controller: 'taxons/index'
     resources :taxons, only: [:show], controller: 'taxons/show'
+    resources :taxons, only: [:destroy], controller: 'taxons/destroy'
+    resources :taxons, only: [:update], controller: 'taxons/update'
     resources :employees, only: [:show], controller: 'employees/show'
     resources :employees, only: [:index], controller: 'employees/index'
     resources :translations, only: [:show], controller: 'translations/show'
@@ -18,6 +20,8 @@ Rails.application.routes.draw do
     resources :translations, only: [:create], controller: 'translations/create'
     resources :translations, only: [:update], controller: 'translations/update'
     resources :i18n_translations, only: [:index], controller: 'i18n_translations/index'
+    resources :messages, only: [:create], controller: 'messages/create'
+    resources :messages, only: [:index], controller: 'messages/index'
   end
 
   namespace :admin do
@@ -26,9 +30,8 @@ Rails.application.routes.draw do
     
     resources :admin_employees, only: [:create], controller: 'employees/create'
 
-    resources :taxons, only: [:create], controller: 'taxons/create'
+    resources :admin_taxons, only: [:create], controller: 'taxons/create'
     resources :taxons, only: [:update], controller: 'taxons/update'
-    resources :taxons, only: [:destroy], controller: 'taxons/destroy'
 
     resources :admin_sessions, only: [:create], controller: 'sessions/create'
   end

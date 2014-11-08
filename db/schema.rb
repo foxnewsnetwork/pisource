@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141023184634) do
+ActiveRecord::Schema.define(version: 20141108055216) do
 
   create_table "admin_users", force: true do |t|
     t.string   "email",                        null: false
@@ -59,6 +59,15 @@ ActiveRecord::Schema.define(version: 20141023184634) do
   add_index "apiv1_listings_taxons", ["listing_id", "listing_type"], name: "index_apiv1_listings_taxons_on_listing_id_and_listing_type", using: :btree
   add_index "apiv1_listings_taxons", ["taxon_id"], name: "index_apiv1_listings_taxons_on_taxon_id", using: :btree
 
+  create_table "apiv1_messages", force: true do |t|
+    t.string   "from_company"
+    t.string   "sender_email"
+    t.string   "subject_text"
+    t.text     "message"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
   create_table "apiv1_pictures", force: true do |t|
     t.integer  "depictable_id"
     t.string   "depictable_type"
@@ -83,6 +92,7 @@ ActiveRecord::Schema.define(version: 20141023184634) do
     t.text     "others"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "showcase_order"
   end
 
   add_index "apiv1_products", ["permalink"], name: "index_apiv1_products_on_permalink", using: :btree
@@ -103,11 +113,13 @@ ActiveRecord::Schema.define(version: 20141023184634) do
   add_index "apiv1_taxons", ["permalink", "root_genus"], name: "index_apiv1_taxons_on_permalink_and_root_genus", unique: true, using: :btree
 
   create_table "apiv1_translations", force: true do |t|
-    t.string   "locale",          null: false
-    t.string   "key",             null: false
-    t.string   "translated_text"
+    t.string   "locale",                         null: false
+    t.string   "key",                            null: false
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.text     "value"
+    t.text     "interpolations"
+    t.boolean  "is_proc",        default: false
   end
 
   add_index "apiv1_translations", ["key", "locale"], name: "index_apiv1_translations_on_key_and_locale", unique: true, using: :btree
