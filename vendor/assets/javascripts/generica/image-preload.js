@@ -1,0 +1,1 @@
+Apiv1.ImagesToPreload = ["assets/hero-splash/california.jpg", "assets/introductory-lobby/fishing.jpg", "assets/hero-splash/rocks.jpg", "assets/cookie-splash/albatross.jpg", "assets/table-booths/fishing.jpg"];

@@ -1,104 +1,71 @@
-//# ruby
-$standard-container-width: 1250px;
-$standard-container-height: 75px;
-$menu-tab-width: 125px;
 $company-title-font-size: 1.35rem;
 $nav-bar-bg-color: fade-out(#444, 0.25);
-$tab-vertical-padding: 15px;
-$tab-horizontal-padding: 15px;
-$tab-border: 1px solid #666;
 $title-font-color: #eee;
 $tab-font-default-color: #333;
 $tab-bg-default-color: #e7e7e7;
 $tab-bg-active-color: #008cba;
 $tab-font-active-color: #fff;
 $tab-bg-hover-color: darken(#008cba, 10%);
-$tab-font-hover-color: invert($tab-bg-default-color);
-//# end
-.application-container,
-#canvas-menu-top,
+$tab-font-hover-color: #ddd;
+#canvas-menu-top {
+  position: absolute;
+  width: 100%;
+  z-index: 9999;
+}
 #page-wrapper {
   position: absolute;
-}
-.application-container,
-#canvas-menu-top {
-  top: 0px;
-}
-.application-container,
-#page-wrapper {
-  height: 100%;
   width: 100%;
-}
-
-#page-wrapper {
-  padding-top: $standard-container-height;
+  height: 100%;
   overflow-y: auto;
 }
-
+#admin {
+  margin-top: 65px;
+}
 nav.site-nav {
-  position: fixed;
-  z-index: 9999;
-  top: 0px;
-  left: 0px;
-  width: 100%;
   @include display-flex;
   @include justify-content(center);
-  background: {
-    color: $nav-bar-bg-color;
+  @include align-items(center);
+  @include flex-direction(row);
+  @include transition-property(box-shadow);
+  @include transition-property(background-color);
+  @include transition-duration(200ms);
+  @include transition-timing-function(ease-in);  
+  .pisource-logo {
+    width: 100px;
+  }
+  width: 100%;
+  &.sticky-naved {
+    @include box-shadow(black 0px 5px 10px);
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    background-color: white;
   }
   .possible-container {
-    @include display-flex;
-    @include justify-content(space-between);
-    width: $standard-container-width;
-    height: $standard-container-height;
-  }
-  .options-menu {
-    @include display-flex;
-    @include justify-content(flex-end);
-    @include align-items(stretch);
-    width: 80%;
-    height: 100%;
-  }
-  .logo {
-    img.pisource-logo {
-      height: 75px;
-    }
+    width: $row-width;
   }
   .title-area {
-    // padding-top: $tab-vertical-padding;
-    // padding-bottom: $tab-vertical-padding;
+    padding-left: 15px;
+    font-size: 2rem;
+  }
+  .title-area,
+  .menu-tab {
     @include display-flex;
-    @include flex-direction(column);
     @include justify-content(center);
-    padding-left: $tab-horizontal-padding;
-    font-size: $company-title-font-size;
-    color: $title-font-color;
-    width: 20%;
-    height: 100%;
+    @include flex-direction(column);
+    height: 65px;
   }
   .menu-tab {
-    // padding-top: $tab-vertical-padding;
-    // padding-bottom: $tab-vertical-padding;
-    @include display-flex;
-    @include flex-direction(column);
-    @include justify-content(center);
     @include align-items(center);
+  }
+  .menu-tab {
     @include transition-property(background-color);
     @include transition-duration(300ms);
     @include transition-timing-function(ease-out);
     font-size: $company-title-font-size;
-    width: $menu-tab-width;
-    border-left: $tab-border;
     color: $tab-font-default-color;
-    background: {
-      color: $tab-bg-default-color;
-    }
-    .menu-nav {
-      text-align: center;
-    }
-    &:last-child {
-      border-right: $tab-border;
-    }
+    text-align: center;
+    text-transform: capitalize;
     &.active {
       background-color: $tab-bg-active-color;
       color: $tab-font-active-color;

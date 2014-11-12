@@ -34,7 +34,7 @@ gem "font-awesome-sass", "~> 4.1.0.0"
 gem 'font-awesome-rails', '~> 4.1.0.0'
 gem 'compass-rails', '~> 1.1.7'
 gem 'compass-flexbox', '~>1.1.3'
-gem 'jquery-ui-sass-rails'
+gem 'jquery-ui-rails', '>=5.0.2'
 gem 'jquery-rails'
 gem 'foundation-rails', '~> 5.3.1.0'
 gem 'modernizr-rails', '~> 2.7.1'
@@ -64,5 +64,5 @@ group :development do
   gem "spring"
   gem 'easy_translate'
   gem 'painful_translate', '>=0.0.4'
-  gem 'cloudrider', '>=0.2.4'
+  gem 'cloudrider', '>=0.2.14'
 end
