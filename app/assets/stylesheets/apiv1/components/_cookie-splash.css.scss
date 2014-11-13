@@ -1,5 +1,3 @@
-$standard-container-width: 1250px;
-
 .cookie-splash {
   padding-bottom: 25px;
   .standard-container {
@@ -16,7 +14,7 @@ $standard-container-width: 1250px;
     background: {
       image: url(cookie-splash/albatross.jpg);
       size: cover;
-      position: top left;
+      position: top center;
       repeat: no-repeat;
     }
     overflow: hidden;
@@ -30,7 +28,7 @@ $standard-container-width: 1250px;
     height: 125px;
   }
   .page-intro {
-    width: $standard-container-width;
+    width: $row-width;
     @include display-flex;
     @include align-items(flex-end);
     @include justify-content(flex-end);
@@ -45,7 +43,7 @@ $standard-container-width: 1250px;
     max-height: 75px;
   }
   .cookiecrumbs {
-    width: $standard-container-width;
+    width: $row-width;
     font-size: 1.15rem;
   }
   .crumb {

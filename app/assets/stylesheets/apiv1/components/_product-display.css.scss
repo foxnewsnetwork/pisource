@@ -1,51 +1,68 @@
-.product-display {
-  .media-object {
-    padding-left: 15px;
-    @media #{$small-only} {
-      width: 100%;
-    }
-    @media #{$medium-up} {
-      width: 33%;
-    }
+$material-indigo: #3F51B5;
+$material-blue: #2196F3;
+$material-amber: #FFC107;
+$material-orange: #FF9800;
+
+.airbnb-quad {
+  .product-display {
+    background-color: $material-indigo;
+    color: fade-out(white, 0.13);
   }
+}
+.product-display {
+  @include display-flex;
+  @include flex-direction(column);
+  @include justify-content(space-between);
+  @include transition-property(background-color);
+  @include transition-duration(300ms);
+  @include transition-timing-function(ease-out);
+  height: 500px;
+  margin-bottom: 1rem;
+  &:hover {
+    background-color: darken($material-indigo, 15%);
+    @include filter(brightness(0.95));
+  }
+  
   .media-texts {
-    padding-left: 15px;
-    @media #{$small-only} {
-      width: 100%;
-    }
-    @media #{$medium-up} {
-      width: 66%;
-    }
+    text-align: center;
+    max-height: 200px;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    padding-bottom: 1.5rem;
+    text-overflow: ellipsis;    
   }
   img.product-image {
-    min-height: 275px;
+    max-height: 500px;
+    width: 100%;
   }
   .product-title {
-    font-size: 2rem;
+    color: fade-out(white, 0.13);
+    font-size: 1.2rem;
+    font-weight: bold;
+    display: block;
     text-transform: capitalize;
   }
-  .taxon-tags {
-    padding-bottom: 15px;
+  .product-summary {
+    font-size: 0.7rem;
   }
   .tag {
     @include transition-property(background-color);
     @include transition-duration(300ms);
     @include transition-timing-function(ease-out);
-    background: {
-      color: darken(red, 25%);
-    }
+    background-color: darken(red, 25%);
     &:hover {
       background-color: darken(red, 15%);
     }
     &:before {
       content: "+";
     }
-    font-size: 1.15rem;
+    font-size: 0.7rem;
     color: #ddd;
+    margin-left: 1rem;
     padding-left: 5px;
     padding-right: 10px;
-    padding-top: 5px;
-    padding-bottom: 5px;
+    padding-top: 2.5px;
+    padding-bottom: 2.5px;
     margin-right: 10px;
   }
 }

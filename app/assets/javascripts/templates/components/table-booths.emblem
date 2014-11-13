@@ -1,7 +1,22 @@
-.contact-us-picture.large-6.columns.show-for-large-up
-  .ctn
-    h2.title
-      tr-span en="contact us"
-.contact-form-side.small-12.large-6.columns.ends
-  .ctn
+.row
+  .small-12.medium-6.columns.filler-picture
+    .form-card
+      .title
+        tr-span en="contact us"
+      .contact-info
+        dl.various-info
+          dt.capitalize
+            tr-span en="address"
+          dd 36 Daily Drive, Camarillo, California 93010
+          dt.capitalize
+            tr-span en="phone"
+          dd (626) 376 - 7013
+          dt.capitalize
+            tr-span en="fax"
+          dd (805) 389 - 3028
+          dt.capitalize
+            tr-span en="email"
+          dd info@pisources.com
+    
+  .small-12.medium-6.columns.form-card
     == render "messages/new" message

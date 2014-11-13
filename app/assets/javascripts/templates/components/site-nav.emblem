@@ -7,7 +7,7 @@
         img.pisource-logo src="assets/site-nav/pisource.png"
 
    
-  link-to "index" (query-params anchor="about") class="small-3 medium-2 large-1 columns"
+  link-to "about" class="small-3 medium-2 large-1 columns"
     .menu-tab
       span.hide-for-medium-up
         i.fa.fa-info-circle
@@ -21,7 +21,7 @@
       span.menu-nav.show-for-medium-up 
         tr-span en="products"
 
-  link-to "index" (query-params anchor="contacts") class="small-3 medium-2 large-1 columns"
+  link-to "contacts" class="small-3 medium-2 large-1 columns"
     .menu-tab
       span.hide-for-medium-up
         i.fa.fa-envelope

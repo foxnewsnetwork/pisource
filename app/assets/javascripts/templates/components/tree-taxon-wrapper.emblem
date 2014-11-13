@@ -1,3 +1,3 @@
-h2.wrapper-title
+h2.wrapper-title.capitalize
   tr-span en="categories"
 tree-taxon-ul rootTaxon=rootTaxon activeTaxons=activeTaxons adminMode=adminMode

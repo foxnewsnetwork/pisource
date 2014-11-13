@@ -1,7 +1,8 @@
 .row
   .small-12.columns
     h3.call-us
-      tr-span en="are you a wholesale buyer?"
+      span.capitalize
+        tr-span en="are you a wholesale buyer?"
       span.spacebar
         a.email-us href="mailto:info@pisources.com"
           tr-span en="email us: info@pisources.com"

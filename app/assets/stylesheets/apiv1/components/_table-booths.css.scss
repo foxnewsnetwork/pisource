@@ -1,27 +1,25 @@
 .table-booths {
-  .contact-form-side {
-    background-color: #666;
-  }
-  .ctn {
+  .filler-picture {
     @include display-flex;
     @include justify-content(center);
     @include flex-direction(column);
-    min-height: 735px;
   }
-  .white {
-    color: #eee;
+  .label-text {
+    color: #444;
   }
   .title {
-    text-align: center;
-    color: #eee;
-    font-size: 3rem;
-
+    text-align: right;
+    text-transform: capitalize;
+    color: #444;
+    font-size: 1.25rem;
+    font-weight: bold;
   }
-  .contact-us-picture {
+  .form-card {
+    @include box-shadow(black 0px 0px 10px);
+    padding: 3rem 1rem 1rem 1rem;
+    margin-bottom: 3rem;
     background: {
-      image: url(table-booths/planck.jpg);
-      size: cover;
-      position: bottom left;
+      color: #f3f3f3;
     }
   }
   .thank-you-card {

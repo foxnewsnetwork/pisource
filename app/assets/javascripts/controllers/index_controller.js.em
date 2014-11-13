@@ -7,9 +7,8 @@ class Apiv1.IndexController extends Ember.ObjectController
     return @smoothScrollTo 0 unless _.contains ["about", "products", "contacts"], @anchor
     Ember.run.schedule 'afterRender', @, =>
       el$ = $('#' + @anchor)
-      if el$.length > 0
-        @smoothScrollTo @topOffset el$
-
+      @smoothScrollTo @topOffset el$ if el$.length > 0
+  
   smoothScrollTo: (y) ->
     $("#page-wrapper").animate scrollTop: y if y?
 

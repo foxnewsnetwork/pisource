@@ -1,12 +1,18 @@
-.horizontal-cell
-  .row
-    .small-12.medium-6.medium-offset-5.columns.text-right
-      h1.title.capitalize
-        tr-span en="about us"
-      h3.company-bs
-        tr-span en="bringing the best bounties of the sea to millions around the world"
-      p.summaries
-        each sentence in summarySentences
-          span.spacebar
-            tr-span en=sentence
-.horizontal-cell.fishing-background
+.row
+  .small-12
+    .row
+      .small-12.medium-4.medium-offset-2.columns
+        .about-intro
+          h1.title.capitalize.intro
+            tr-span en="about us"
+          h3.company-bs.intro
+            tr-span en="Bringing the best bounties of the sea to millions around the world"
+          p.summaries.intro
+            each sentence in summarySentences
+              span.spacebar
+                tr-span en=sentence
+      
+      .small-12.medium-6.columns
+        preload-image class="th fishing-background" source="assets/introductory-lobby/fishing.jpg"
+
+    

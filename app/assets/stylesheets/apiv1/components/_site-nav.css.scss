@@ -3,7 +3,6 @@ $nav-bar-bg-color: fade-out(#444, 0.25);
 $title-font-color: #eee;
 $tab-font-default-color: #333;
 $tab-bg-default-color: #e7e7e7;
-$tab-bg-active-color: #008cba;
 $tab-font-active-color: #fff;
 $tab-bg-hover-color: darken(#008cba, 10%);
 $tab-font-hover-color: #ddd;
@@ -45,7 +44,6 @@ nav.site-nav {
     width: $row-width;
   }
   .title-area {
-    padding-left: 15px;
     font-size: 2rem;
   }
   .title-area,
@@ -58,6 +56,10 @@ nav.site-nav {
   .menu-tab {
     @include align-items(center);
   }
+  a.active {
+    font-weight: bold;
+    text-decoration: underline;
+  }
   .menu-tab {
     @include transition-property(background-color);
     @include transition-duration(300ms);
@@ -66,10 +68,6 @@ nav.site-nav {
     color: $tab-font-default-color;
     text-align: center;
     text-transform: capitalize;
-    &.active {
-      background-color: $tab-bg-active-color;
-      color: $tab-font-active-color;
-    }
     &:hover {
       background-color: $tab-bg-hover-color;
       color: $tab-font-hover-color;

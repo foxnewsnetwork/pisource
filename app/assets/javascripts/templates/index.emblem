@@ -1,7 +1,2 @@
 hero-splash
-
-introductory-lobby id="about"
-
 products-showcase id="products" products=model.products
-
-table-booths id="contacts" message=model.message
