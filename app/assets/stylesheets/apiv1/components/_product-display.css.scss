@@ -16,7 +16,7 @@ $material-orange: #FF9800;
   @include transition-property(background-color);
   @include transition-duration(300ms);
   @include transition-timing-function(ease-out);
-  height: 500px;
+  height: 250px;
   margin-bottom: 1rem;
   &:hover {
     background-color: darken($material-indigo, 15%);
@@ -32,7 +32,7 @@ $material-orange: #FF9800;
     text-overflow: ellipsis;    
   }
   img.product-image {
-    max-height: 500px;
+    max-height: 250px;
     width: 100%;
   }
   .product-title {
